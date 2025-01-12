@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/ToDoList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>To Do List</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/image-removebg-preview (1).png">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="Logo">To do List</h1>
+            
+            <div class="Navegacoes">
+                <ul id="AcessosNav">
+                    <a href="../Html/ToDoList.html">
+                        <li id="PagesPrincipal">Home</li>
+                    </a>
+                    <a href="../Html/ListasDaSemana.html">
+                        <li id="Pages">Listas da Semana</li>
+                    </a>
+                    <a href="../Html/Calendario.html">
+                        <li id="Pages">Calendário</li>
+                    </a>
+                    <a href="../Html/MetasDiarias.html">
+                        <li id="Pages">Metas Diárias</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Hero">
+            <div class="TextoHero">
+                <div class="br">
+                    <br>
+                </div>
+                <div class="HeroConteudo">
+                    <span id="TituloHero">Comece a organizar a sua rotina conosco!</span>
+                        <hr id="LinhaHero">
+                    <span id="SubtituloHero"> 
+                        Explore os melhores recursos disponíveis para uma melhor organização diária.    
+                    </span>
+                </div>
+            </div>
+            <div class="ImgHero">
+                <span class="GpImg1">
+                    <img src="../imgs/PessoaTeclando.png" alt="PessoaTeclando">
+                    <img src="../imgs/MeninoEscrevendo.png" alt="MeninoEstudando">
+                </span>
+                <span class="GpImg2">
+                    <img src="../imgs/ToDoList.png" alt="ToDoList">
+                    <img src="../imgs/GraficoNaMao.png" alt="GraficoNaMao">
+                </span>
+            </div>
+        </section>
+        <section class="Tarefas">
+                <div class="DiaAtual">
+                    <div class="TextoDiaAtual">
+                        <span id="DiaAtualHoje">Hoje</span>
+                        <div class="informacoes-dia">
+                            <span id="DiaAtualPrincipal"></span>
+                            <button id="AdicionarTarefa"><a href="../Html/PagDia.html" class="diaLista" onclick="localStorage.setItem('ListaSelecionada',JSON.stringify(hoje()))"> Todas as tarefas  ></a></button>
+                        </div>
+                        <span id="SubtituloDiaAtual">Visualize suas próximas tarefas e comece seu dia com o pé direito.</span>
+                    </div>
+                </div>
+                <div class="TarefasDiarias">
+                    <table>
+                        <tr>
+                            <td aria-label="1">
+                                <div class="Atv1">
+                                    <div class="TaskColumn">
+                                        <span id="nome" class="nome"></span>
+                                        <hr>
+                                        <span id="time" class="time"></span>
+                                        <div class="iconDescricao"></div>
+                                    </div>
+                                    <div class="CheckColumn">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" class="checkbox" id="checkboxTarefa" onclick="TerminarTarefa('.Atv1')">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td aria-label="2">
+                                <div class="Atv2">
+                                    <div class="TaskColumn">
+                                        <span id="nome" class="nome"></span>
+                                        <hr>
+                                        <span id="time" class="time"></span>
+                                        <div class="iconDescricao">
+                                        </div>
+                                    </div>
+                                    <div class="CheckColumn">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" class="checkbox" id="checkboxTarefa" onclick="TerminarTarefa('.Atv2')">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td aria-label="3">
+                                <div class="Atv3">
+                                    <div class="TaskColumn">
+                                        <span id="nome" class="nome"></span>
+                                        <hr>
+                                        <span id="time" class="time"></span>
+                                        <div class="iconDescricao">
+                                        </div>
+                                    </div>
+                                    <div class="CheckColumn">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" class="checkbox" id="checkboxTarefa" onclick="TerminarTarefa('.Atv3')">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td aria-label="4">   
+                                <div class="Atv4">
+                                    <div class="TaskColumn">
+                                        <span id="nome" class="nome"></span>
+                                        <hr>
+                                        <span id="time" class="time"></span>
+                                        <div class="iconDescricao">
+                                        </div>
+                                    </div>
+                                    <div class="CheckColumn">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" class="checkbox" id="checkboxTarefa" onclick="TerminarTarefa('.Atv4')">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Diariamente">
+                    <div class="TextoDiariamente">
+                        <div class="informacoes-metas">
+                            <span id="DiaAtualPrincipal">Metas Diárias</span>
+                        </div>
+                        <span id="SubtituloMetasDiarias">Complete suas metas diárias fixas.</span>
+                    </div>
+                </div>
+                <div class="ConteudoMetasDiarias">
+                    <div id="metasDiarias" class="MetasDiarias">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="LogoSlogan">
+            <h1 id="LogoFooter">To do List</h1>
+            <span id="slogan">Organizando Vidas </P>
+        </div>
+        <div class="DireitosAutorais">
+            <span id="DireitosReservados"><i>2024 ©</i></span>
+            <span id="DireitosReservados"><i>Todos os direitos reservados.</i></span>
+        </div>
+        <div class="EntreEmContato">
+            <span id="EntreContato"><b>ENTRE EM CONTATO</b></span>
+            <span id="Email"><i>todolist@gmail.com</i></span>
+        </div>
+    </footer>
+    <script src="../JS/ToDoList.js"></script>
+    <script>  
+        ColocarDiaHoje();
+        IniciarListas();
+        document.addEventListener('DOMContentLoaded', () => {
+            ColocarDiaHoje();
+            CarregarMetasDiariasInicio();
+            CarregarTarefasInicio()
+        });    
+        
+    </script>
+</body>
+</html>

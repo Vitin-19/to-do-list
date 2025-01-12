@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swapR');
+    font-family: 'Righteous';
+}
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+    font-family: 'Inter';
+}
+@font-face {
+    font-family: 'Epilogue';
+    src: url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+html {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+body { 
+    margin: 0;
+    background-color: #F9F9F9;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex: 1;
+}
+header {
+    background-color: #FFFFFF;
+}
+nav{
+    display: flex;
+}
+.Navegacoes{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+    
+}
+
+#Logo{
+    color: #1056B1;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+    margin-left: 30px;
+    
+}
+#PagesPrincipal {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #1056B1; /* Linha azul mais fina e destacada */
+    padding-bottom: 12px; /* Espaço menor para alinhar melhor */
+}
+
+#Pages {
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #7d7d7d;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.2s ease, border-bottom 0.2s ease; /* Suavidade */
+}
+
+#Pages:hover {
+    color: #1056B1; /* Muda a cor do texto no hover */
+    border-bottom: 1px solid #1056B1; /* Mostra uma linha azul fina no hover */
+}
+
+#AcessosNav {
+    font-family: 'Inter', sans-serif;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+#AcessosNav a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor definida no CSS */
+    font-family: 'Inter';
+}
+.Cabeçalho{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    margin-bottom: 30px;
+}
+.mainCabecalho{
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#MinhasListas{
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 60px;
+}
+.buscar{
+    background-color:rgba(240, 240, 240, 1);
+    border-radius: 40px;
+    width: 70%;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 30px;
+    font-family: 'Epilogue',sans-serif;
+    font-size: 24px;
+    color: #7d7d7d;
+}
+.BarraPesquisa{
+    display: flex;
+    align-items: center;
+    width: 1265px;
+    height: 58px;
+}
+#search-text{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    margin-left: 10px;
+    width: 100%;
+    height: 58px;
+    font-size: 16px;
+}
+.BarraPesquisa i {
+    margin-left: 10px;
+    font-size: 16px;
+}
+.add{
+    width: 10%;
+    display: flex;
+    justify-content: center; 
+    align-items: start;
+    margin-bottom: 100px;
+}
+#Add{
+    background-color:rgba(240, 240, 240, 1);
+    border-radius: 30px;
+    width: 170px;
+    height: 30px;
+    border: none;
+    margin-left: 65%;
+    margin-top: 90px;
+    font-size: 16px;
+    font-family: 'Inter',sans-serif;
+    color: #7d7d7d; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Listas1{
+    margin-top: -7%;
+    margin-bottom: 7%;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+button{
+    border: none;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    margin-left: -30px;
+    padding: 10px 18px;
+    color: rgba(14, 14, 14, 0.5);
+    background-color: rgba(249, 249, 249, 1);
+  }
+  .savebtn{
+    width: auto;
+    margin-left: 25px;
+    padding: 10px 18px;
+    background-color: rgba(16, 86, 177, 1);
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+    background-color:rgba(249, 249, 249, 1);
+    border-radius: 20px;
+  }
+  .headerPopUp{
+      display: flex;
+      align-items: center;
+  }
+  .IconsPopUp{
+        margin-right: 84%;
+  }
+  .IconsPopUp01{
+        margin-right: 84%;
+  }
+  .Hora{
+      display: flex;
+      margin: 20px;
+  }
+  #InicioFim{
+      margin-right:5px;
+      font-family:'Inter',sans-serif;
+  }
+  #Horario1,#Horario2{
+      border: none;
+      margin-right: 20px;
+      width: 6%;
+  }
+  .CheckColumnPopUp{
+      margin-top: 15px;
+      margin-bottom: 20px;
+      margin-left: -20px;
+  }
+  .MainPopUp{
+      margin-left: 40px;
+  }
+  .barraFerramentas{
+    background-color: #1056B1;
+    width:1150px;
+    height: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; 
+    display: flex;
+    flex-direction: row;
+}
+
+/* General container styling */
+.wordtype {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Font dropdown styling */
+.font-dropdown, .size-dropdown {
+    appearance: none; /* Removes default browser styling */
+    -moz-appearance: none; /* Firefox-specific */
+    -webkit-appearance: none; /* Chrome/Safari-specific */
+    background-color: #1056B1; /* Dropdown background */
+    color: #F9F9F9; /* Text color */
+    font-size: 16px;
+    padding: 10px;
+    border: none; /* Remove borders */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none; /* Removes the focus outline */
+}
+
+/* Dropdown hover effect */
+.font-dropdown:hover, .size-dropdown:hover {
+    background-color: #0d4a9d;
+}
+
+/* Dropdown focus effect */
+.font-dropdown:focus, .size-dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional glow effect */
+}
+
+/* Options styling */
+.font-dropdown option, .size-dropdown option {
+    background-color: #1056B1; /* Default background color */
+    color: #F9F9F9; /* Default text color */
+}
+
+/* Option hover styling */
+.font-dropdown option:hover, .size-dropdown option:hover {
+    background-color: #FFFFFF; /* Background changes to white on hover */
+    color: #000000; /* Text changes to black */
+}
+
+/* Horizontal rule styling */
+.popupSeparator {
+    color: #004093; /* Custom color */
+    border-color: #004093;
+    background-color: #004093;
+}
+
+.styling {
+    display: flex;
+    flex-direction: row;
+}
+
+#bold {
+    background-color: #1056B1;
+    color: white;
+}
+#italic {
+    background-color: #1056B1;
+    color: white;
+}
+
+.formatation {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+#unorderedList {
+    background-color: #1056B1;
+    color: white;
+}
+
+#checkboxAdd {
+    background-color: #1056B1;
+    color: white;
+    bottom: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+#url {
+    background-color: #1056B1;
+    color: white;
+}
+
+#inputTrigger {
+    background-color: #1056B1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageAdd {
+    display: none;
+}
+
+.description {
+    font-size: 16px; /* Tamanho fixo para as fontes */
+    line-height: 1.5; /* Altura da linha consistente */
+    max-height: 200px; /* Altura máxima do div */
+    width: 1150px; /* Largura do div */
+    overflow: auto; /* Permite que a rolagem seja ativada quando o conteúdo ultrapassar a altura */
+    resize: none; /* Impede o redimensionamento pelo usuário */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
+    outline: none;
+    box-shadow: #000;
+    border-radius: 15px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+}
+  input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:rgba(249, 249, 249, 1);
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 85%; /* Could be more or less, depending on screen size */
+}
+#nomecriartarefa{
+    background-color:rgba(249, 249, 249, 1);
+    border: none;
+    height: 37px;
+    width: 45%;
+    font-size: 33px;
+    font-family: 'Inter', sans-serif;
+}
+.botoes{
+    margin-left: 82.8%;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+     width: 100%;
+  }
+}  
+.botoes1{
+    margin-top: 55px;
+    margin-left: 250px;
+}
+  .cancelbtn1 {
+    width: auto;
+    margin-left: -30px;
+    padding: 10px 18px;
+    color: rgba(14, 14, 14, 0.5);
+    background-color: rgba(249, 249, 249, 1);
+  }
+  .savebtn1{
+    width: auto;
+    margin-left: 25px;
+    padding: 10px 18px;
+    color: white;
+    background-color: rgba(16, 86, 177, 1);
+    border-radius: 5px;
+  }
+  #DesejaExcluir1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+  }
+  .container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+    background-color:rgba(249, 249, 249, 1);
+    border-radius: 20px;
+  }
+  .modal1 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    justify-content: center;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content1 {
+    align-items: center;
+    background-color:rgba(249, 249, 249, 1);
+    margin: 15% auto 17% auto; /* 5% from the top, 17% from the bottom and centered */
+    border-radius: 20px;
+    width: 450px; /* Could be more or less, depending on screen size */
+    height: 150px;
+  }
+.Listas {
+     display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: -10%;
+}
+
+
+[class^="Atv"]{
+    display: flex;
+    width: 90%;
+    height: 75px;
+    border-radius: 15px;
+    background-color: rgba(243, 243, 243, 0.8);
+    font-family: 'Epilogue', sans-serif;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 2%;
+    padding-left: 2%;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+[class^="Atv"]:hover{
+    transform: scale(1.02);
+}
+#nome{
+    font-size: 20px;
+    color: rgba(30, 30, 30, 1);
+    font-family: 'Montserrat', sans-serif ;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+#time{
+    font-size: 10px;
+    color: rgba(30, 30, 30, 1);
+    font-family: 'Montserrat', sans-serif ;
+    padding-bottom: 5px;
+}
+.textoicon{
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    margin-top: 30px;
+    justify-content:space-evenly;
+    opacity: 70%;
+    
+}
+.Lixeira{
+    margin-right: 10px;
+}
+footer {
+    background-color: #1056B1;
+    width: 100%;
+    height: 130px;
+    line-height: 8px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px
+}
+
+.LogoSlogan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#LogoFooter {
+    color: white;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+#slogan {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+.DireitosAutorais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#DireitosReservados {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.EntreEmContato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#EntreContato {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 25px;
+    width: 15;
+    color: white;
+    font-size: 20px;
+}
+
+#Email {
+    font-family: 'Inter', sans-serif;
+    width: 15;
+    color: white;
+    font-size: 15px;
+}
+
+i {
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+i:hover {
+    transform: scale(1.35);
+    color: #1056B1;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/Calendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>To Do List</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/image-removebg-preview (1).png">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="Logo">To do List</h1>
+            
+            <div class="Navegacoes">
+                <ul id="AcessosNav">
+                    <a href="../Html/ToDoList.html">
+                        <li id="Pages">Home</li>
+                    </a>
+                    <a href="../Html/ListasDaSemana.html">
+                        <li id="Pages">Listas da Semana</li>
+                    </a>
+                    <a href="../Html/Calendario.html">
+                        <li id="PagesPrincipal">Calendário</li>
+                    </a>
+                    <a href="../Html/MetasDiarias.html">
+                        <li id="Pages">Metas Diárias</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Cabecalho">
+            <div class="mainCabecalho">
+                <span id="Titulo"><b>Calendário</b></span>
+            </div>
+            <div class="Subtitulo">
+                <span id="Subtitle">Veja suas próximas listas.</span>
+            </div>
+        </section>
+        
+        <section id="CalendarArea">
+            <!--<div class="Selector">
+                <div class="EssaSemana">
+                    <Span id="SemanaAtual"> Semana Atual</Span>
+                    <hr id="LinhaAtual">
+                </div>
+                <div class="SemanaPassada">
+                    <span id="SemanaAnterior"> Semana Interior</span>
+                    <hr id="LinhaPassada">
+                </div>
+            </div>-->
+            <div class="Calendar">
+                <div class="CalendarTop">    
+                </div> 
+                    <div class="Week">
+                        <div class="weekday1" style="border-color: #1056B1; box-shadow: 15px"> 
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday2">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday3">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday4">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday5">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday6">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                                
+                            </div>
+                        </div>
+                        <div class="weekday7">
+                            <span class="CalendarDayTitle"></span>
+                            <hr class="CalendarDayHr">
+                            <div class="Task">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="LogoSlogan">
+            <h1 id="LogoFooter">To do List</h1>
+            <span id="slogan">Organizando Vidas </P>
+        </div>
+        <div class="DireitosAutorais">
+            <span id="DireitosReservados"><i>2024 ©</i></span>
+            <span id="DireitosReservados"><i>Todos os direitos reservados.</i></span>
+        </div>
+        <div class="EntreEmContato">
+            <span id="EntreContato"><b>ENTRE EM CONTATO</b></span>
+            <span id="Email"><i>todolist@gmail.com</i></span>
+        </div>
+    </footer>
+    <script src="../JS/ToDoList.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            CarregarCalendario()
+        });
+    </script>
+</body>
+</html>

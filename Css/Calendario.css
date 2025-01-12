@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swapR');
+    font-family: 'Righteous';
+}
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+    font-family: 'Inter';
+}
+@font-face {
+    font-family: 'Epilogue';
+    src: url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    background-color: #F9F9F9;
+    min-height: 100vh;
+}
+main{
+    flex: 1;
+}
+header {
+    background-color: #FFFFFF;
+}
+nav{
+    display: flex;
+}
+.Navegacoes{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+    
+}
+
+#Logo{
+    color: #1056B1;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+    margin-left: 30px;
+    
+}
+#PagesPrincipal {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #1056B1; 
+    padding-bottom: 12px; 
+}
+
+#Pages {
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #7d7d7d;
+    position: relative; 
+    padding-bottom: 5px;
+    transition: color 0.2s ease, border-bottom 0.2s ease; 
+}
+
+#Pages:hover {
+    color: #1056B1;
+    border-bottom: 1px solid #1056B1; 
+}
+
+#AcessosNav {
+    font-family: 'Inter';
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+#AcessosNav a {
+    text-decoration: none;
+    color: inherit; 
+    font-family: 'Inter';
+}
+.Cabecalho{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.mainCabecalho{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#Titulo{
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 60px;
+}
+.Subtitulo{
+    margin-top: 15px;
+    margin-left: 60px;
+}
+#Subtitle {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 450;
+    opacity: 80%;
+}
+.CalendarArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.Selector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    height: 20px;
+    margin-left: 15%;
+}
+.EssaSemana{
+    margin-left: 10%;
+    flex-direction: column;
+}
+.SemanaPassada{
+    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+}
+#LinhaAtual{
+    width: 500px;
+    margin-left:-38%;
+}
+#LinhaPassada{
+    width: 500px;
+    margin-left:-38%;
+}
+
+.weekSelector{ 
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Calendar {
+    background-color: #F9F9F9;
+    box-shadow: #c2c2c2;
+    width: 80%;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    border-color: #e2e2e2;
+}
+.CalendarTop{
+    background-color: #1056B1;
+    height: 35px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Week {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+[class^="weekday"]{
+    border: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    width: 360px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    border-color: #e2e2e2;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+[class^="weekday"]:hover{
+    transform: scale(1.03);
+}
+.CalendarDayTitle{
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.CalendarDayHr{
+    width: 100px;
+}
+[class^="Task"]{
+    display: flex;
+    flex-direction: row;
+}
+.Task {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.Task span {
+    padding-top: 0px;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border: 0.5px solid #000;
+    border-radius: 100px;
+}
+
+
+
+footer {
+    background-color: #1056B1;
+    width: 100%;
+    height: 130px;
+    line-height: 8px;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px;
+    position: fixed;
+    bottom: 0;
+}
+
+.LogoSlogan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#LogoFooter {
+    color: white;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+#slogan {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+.DireitosAutorais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#DireitosReservados {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.EntreEmContato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#EntreContato {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 25px;
+    width: 15;
+    color: white;
+    font-size: 20px;
+}
+
+#Email {
+    font-family: 'Inter', sans-serif;
+    width: 15;
+    color: white;
+    font-size: 15px;
+}

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swapR');
+    font-family: 'Righteous';
+}
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+    font-family: 'Inter';
+}
+@font-face {
+    font-family: 'Epilogue';
+    src: url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+html {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #F9F9F9;
+}
+header {
+    background-color: #FFFFFF;
+}
+nav{
+    display: flex;
+}
+.Navegacoes{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+    
+}
+
+#Logo{
+    color: #1056B1;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+    margin-left: 30px;
+    
+}
+#PagesPrincipal {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #1056B1; /* Linha azul mais fina e destacada */
+    padding-bottom: 12px; /* Espaço menor para alinhar melhor */
+}
+
+#Pages {
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #7d7d7d;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.2s ease, border-bottom 0.2s ease; /* Suavidade */
+}
+
+#Pages:hover {
+    color: #1056B1; /* Muda a cor do texto no hover */
+    border-bottom: 1px solid #1056B1; /* Mostra uma linha azul fina no hover */
+}
+
+#AcessosNav {
+    font-family: 'Inter', sans-serif;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+#AcessosNav a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor definida no CSS */
+    font-family: 'Inter';
+}
+.Cabeçalho{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    margin-bottom: 30px;
+}
+.mainCabecalho{
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#MinhasListas{
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 60px;
+}
+.Listas-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: -10%;
+}
+.Atv1,
+.Atv2,
+.Atv3,
+.Atv4,
+.Atv5,
+.Atv6,
+.Atv7{ 
+    display: flex;
+    width: 90%;
+    height: 75px;
+    border-radius: 15px;
+    background-color: rgba(243, 243, 243, 0.8);
+    font-family: 'Epilogue', sans-serif;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 2%;
+    padding-left: 2%;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+.Atv1:hover,
+.Atv2:hover,
+.Atv3:hover,
+.Atv4:hover,
+.Atv5:hover,
+.Atv6:hover,
+.Atv7:hover {
+    transform: scale(1.02);
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+#nome{
+    font-size: 22px;
+    color: rgba(30, 30, 30, 1);
+    font-family: 'Montserrat', sans-serif ;
+    padding-bottom: 5px;
+}
+#time{
+    font-size: 13px;
+    color: rgba(30, 30, 30, 1);
+    font-family: 'Montserrat', sans-serif ;
+    opacity: 80%;
+}
+footer {
+    background-color: #1056B1;
+    width: 100%;
+    height: 130px;
+    line-height: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.LogoSlogan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#LogoFooter {
+    color: white;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+#slogan {
+    color: white;
+    font-family: 'inter', sans-serif;
+    font-weight: 30;
+    font-size: 15px;
+
+}
+
+.DireitosAutorais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#DireitosReservados {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.EntreEmContato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#EntreContato {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 25px;
+    width: 15;
+    color: white;
+    font-size: 20px;
+}
+
+#Email {
+    font-family: 'Inter', sans-serif;
+    width: 15;
+    color: white;
+    font-size: 15px;
+}

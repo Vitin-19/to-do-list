@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/MetasDiarias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>To do List</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/image-removebg-preview (1).png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="Logo">To do List</h1>
+            <div class="Navegacoes">
+                <ul id="AcessosNav">
+                    <a href="../Html/ToDoList.html">
+                        <li id="Pages">Home</li>
+                    </a>
+                    <a href="../Html/ListasDaSemana.html">
+                        <li id="Pages">Listas da Semana</li>
+                    </a>
+                    <a href="../Html/Calendario.html">
+                        <li id="Pages">Calendário</li>
+                    </a>
+                    <a href="../Html/MetasDiarias.html">
+                        <li id="PagesPrincipal">Metas Diárias</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Cabeçalho">
+            <div class="mainCabecalho">
+                <span id="MinhasListas"><b>Metas diárias</b></span>
+            </div>
+            <button id="Add" onclick="document.getElementById('id03').style.display='block'">
+                + Adicionar Meta
+            </button>
+        </section>
+        <section class="Listas1">
+            <section id="PopUp">
+                <div id="id03" class="modal"><!--Criar Tarefa-->
+                    <form class="modal-content animate" id="CriacaodeMeta">
+                        <div class="container">
+                            <div class="headerPopUp">
+                                <input type="text" placeholder="Nome Da Meta " id="nomecriartarefa" required>
+                                <div class="IconsPopUp">
+                                    <i class="fas fa-pencil" style="margin-right: 10px;"></i></span>
+                                </div>
+                            </div>
+                            <div class="Hora">
+                            </div>
+                            <div class="MainPopUp">
+                                <div class="barraFerramentas">
+                                    <div class="wordtype">
+                                        <select id="fontSelector" class="font-dropdown" onchange="changeFont(this)">
+                                            <option value="" disabled hidden>Aa</option> <!-- Sempre visível no botão -->
+                                            <option value="Arial">Arial</option>
+                                            <option value="Times New Roman">Times New Roman</option>
+                                            <option value="Comic Sans MS">Comic Sans MS</option>
+                                            <option value="Verdana">Verdana</option>
+                                            <option value="Courier">Courier</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Tahoma">Tahoma</option>
+                                        </select>
+                                        <select id="sizeSelector" class="font-dropdown" onchange="changeSize(this)">
+                                            <option value="11px">11px</option>
+                                            <option value="12px">12px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="16px" selected>16px</option>
+                                            <option value="20px">20px</option>
+                                            <option value="24px">24px</option>
+                                        </select>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="styling"> 
+                                        <button id="bold" onclick="boldTransform()"><i class="fa fa-bold"></i></button>
+                                        <button id="italic" onclick="italicTransform()"><i class="fa fa-italic"></i></button>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="formatation">
+                                        <button id="checkboxAdd" onclick="checkboxTransform()"><i class= "fa fa-check-square"></i></button>
+                                        <button id="unorderedList" onclick="ulTransform()"><i class="fa fa-list-ul"></i></button>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="inputs">
+                                        <button id="url" onclick="insertUrl()">  <i class="fa fa-link"></i> </button>
+                                        <button id="inputTrigger" onclick="fileTrigger()"> <i class="fa fa-file"></i> </button>
+                                        <input type="file" id="imageAdd" accept="image/*" onclick="uploadImage()">
+                                    </div>
+                                </div>
+                                <div id="description" contenteditable="true" class="description" autocomplete="off" required rows="10" placeholder="Descreva sua meta..."></div>
+                            
+                                <div class="botoes">
+                                    <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancelar</button>
+                                    <button type="submit" onclick="document.getElementById('id03').style.display='none'; CriarMeta();" class="savebtn">Criar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="id01" class="modal"><!--Edição da Tarefa-->
+                    <form class="modal-content animate" id="formEdicaoMeta">
+                        <div class="container">
+                            <div class="headerPopUp">
+                                <input type="text" placeholder="Nome Da meta" id="nomecriartarefa" class="NomeMeta"
+                                    required>
+                                <div class="IconsPopUp01">
+                                    <i class="fas fa-pencil" style="margin-right: 10px;"></i></span>
+                                </div>
+                            </div>
+                            <div class="Hora">
+                            </div>
+                            <div class="MainPopUp">
+                                <div class="barraFerramentas">
+                                    <div class="wordtype">
+                                        <select id="fontSelector" class="font-dropdown" onchange="changeFont(this)">
+                                            <option value="" disabled hidden>Aa</option> <!-- Sempre visível no botão -->
+                                            <option value="Arial">Arial</option>
+                                            <option value="Times New Roman">Times New Roman</option>
+                                            <option value="Comic Sans MS">Comic Sans MS</option>
+                                            <option value="Verdana">Verdana</option>
+                                            <option value="Courier">Courier</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Tahoma">Tahoma</option>
+                                        </select>
+                                        <select id="sizeSelector" class="font-dropdown" onchange="changeSize(this)">
+                                            <option value="11px">11px</option>
+                                            <option value="12px">12px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="16px" selected>16px</option>
+                                            <option value="20px">20px</option>
+                                            <option value="24px">24px</option>
+                                        </select>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="styling"> 
+                                        <button id="bold" onclick="boldTransform()"><i class="fa fa-bold"></i></button>
+                                        <button id="italic" onclick="italicTransform()"><i class="fa fa-italic"></i></button>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="formatation">
+                                        <button id="checkboxAdd" onclick="checkboxTransform()"><i class= "fa fa-check-square"></i></button>
+                                        <button id="unorderedList" onclick="ulTransform()"><i class="fa fa-list-ul"></i></button>
+                                        <hr class="popupSeparator">
+                                    </div>
+                                    <div class="inputs">
+                                        <button id="url" onclick="insertUrl()">  <i class="fa fa-link"></i> </button>
+                                        <button id="inputTrigger" onclick="fileTrigger()"> <i class="fa fa-file"></i> </button>
+                                        <input type="file" id="imageAdd" accept="image/*" onclick="uploadImage()">
+                                    </div>
+                                </div>
+                                <div id="description" contenteditable="true" class="description" autocomplete="off" required rows="10" placeholder="Descreva sua meta..."></div>
+                            
+                                <div class="botoes">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                                    <button type="submit" onclick="document.getElementById('id01').style.display='none'; EditarMeta();" class="savebtn">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="id02" class="modal1"> <!--Pop Up Excluir tarefa -->
+                    <form class="modal-content1 animate">
+                        <div class="container1">
+                            <span id="DesejaExcluir1"> Deseja realmente excluir essa tarefa?</span>
+                            <div class="botoes1">
+                                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                                    class="cancelbtn1">Cancelar
+                                </button>
+                                    <button type="button" onclick="document.getElementById('id02').style.display = 'none';
+                                        let Meta = JSON.parse(localStorage.getItem('MetaAExcluir'));
+
+                                        let Atv = document.querySelector(Meta);
+
+                                        if (Atv) {
+                                            Atv.remove(); // Remove o elemento da página
+                                        }
+
+                                        let nomeMeta = Atv ? Atv.querySelector('#nome').textContent : null;
+
+                                        if (nomeMeta) {
+                                            let MetasDiarias = JSON.parse(localStorage.getItem('MetasDiarias'));
+
+                                            // Procura pela meta no array e a remove
+                                            for (let i = 0; i < MetasDiarias.length; i++) {
+                                                if (MetasDiarias[i].nome === nomeMeta) {
+                                                    MetasDiarias.splice(i, 1);
+                                                    localStorage.setItem('MetasDiarias', JSON.stringify(MetasDiarias));
+                                                    break;
+                                                }
+                                            }
+                                        }" class="savebtn1">Excluir 
+                                    </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="LogoSlogan">
+            <h1 id="LogoFooter">To do List</h1>
+            <span id="slogan">Organizando Vidas</P>
+        </div>
+        <div class="DireitosAutorais">
+            <span id="DireitosReservados"><i>2024 ©</i></span>
+            <span id="DireitosReservados"><i>Todos os direitos reservados.</i></span>
+        </div>
+        <div class="EntreEmContato">
+            <span id="EntreContato"><b>ENTRE EM CONTATO</b></span>
+            <span id="Email"><i>todolist@gmail.com</i></span>
+        </div>
+    </footer>
+    <script src="../JS/ToDoList.js"></script>
+    <script>
+        ColocarMetas();
+    </script>
+</body>
+
+</html>

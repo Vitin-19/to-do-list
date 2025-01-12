@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/ListasDaSemana.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>To do List</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/image-removebg-preview (1).png">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="Logo">To do List</h1>
+            <div class="Navegacoes">
+                <ul id="AcessosNav">
+                    <a href="../Html/ToDoList.html">
+                        <li id="Pages">Home</li>
+                    </a>
+                    <a href="../Html/ListasDaSemana.html">
+                        <li id="PagesPrincipal">Listas da Semana</li>
+                    </a>
+                    <a href="../Html/Calendario.html">
+                        <li id="Pages">Calendário</li>
+                    </a>
+                    <a href="../Html/MetasDiarias.html">
+                        <li id="Pages">Metas Diárias</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Cabeçalho">
+            <div class="mainCabecalho">
+                <span id="MinhasListas"><b>Listas da Semana</b></span>
+            </div>  
+        </section>
+        <section class="Listas-container">
+            <div class="Atv1" onclick="var Lista = document.querySelector('.Atv1'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">Hoje</span>
+                </div>
+            </div>
+            <div class="Atv2" onclick=" var Lista = document.querySelector('.Atv2'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">Amanhã</span>
+                </div>
+            </div> 
+            <div class="Atv3" onclick=" var Lista = document.querySelector('.Atv3'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">2 Dias</span>
+                </div>
+            </div>
+            <div class="Atv4" onclick=" var Lista = document.querySelector('.Atv4'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">3 Dias</span>
+                </div>
+            </div>
+            <div class="Atv5" onclick=" var Lista = document.querySelector('.Atv5'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">4 Dias</span>
+                </div>
+            </div>
+            <div class="Atv6" onclick=" var Lista = document.querySelector('.Atv6'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">5 Dias</span>
+                </div>
+            </div>
+            <div class="Atv7" onclick=" var Lista = document.querySelector('.Atv7'); var ListaNome = Lista.querySelector('.nome').textContent; localStorage.setItem('ListaSelecionada',JSON.stringify(ListaNome)); window.location.href = '../Html/PagDia.html'; ">
+                <div class="task">
+                    <span id="nome" class="nome"></span>
+                    <span id="time" class="time">6 Dias</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="LogoSlogan">
+            <h1 id="LogoFooter">To do List</h1>
+            <span id="slogan">Organizando Vidas</P>
+        </div>
+        <div class="DireitosAutorais">
+            <span id="DireitosReservados"><i>2024 ©</i></span>
+            <span id="DireitosReservados"><i>Todos os direitos reservados.</i></span>
+        </div>
+        <div class="EntreEmContato">
+            <span id="EntreContato"><b>ENTRE EM CONTATO</b></span>
+            <span id="Email"><i>todolist@gmail.com</i></span>
+        </div>
+    </footer>
+    <script src="../JS/ToDoList.js"></script>
+    <script>
+        ColocarListaTarefa()
+    </script>
+    
+</body>
+</html>
